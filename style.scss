@@ -1,0 +1,109 @@
+@import './about';
+@import './default';
+
+.showcase{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(rgba(41, 202, 108, 0.6),rgb(43, 43, 202));
+}
+.showcase .wave{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.container{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.showcase .container{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 50px;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    padding-top: 50px;
+}
+.showcase .container img{
+    height: 300px;
+    // flex: 1 1 300px;
+}
+.showcase .container .text{
+    h1{
+        font-size: 30px;
+        text-transform: uppercase;
+        line-height: 1.6;
+        color: white;
+        margin-bottom: 20px;
+    }
+    p{
+        color: rgba(255, 255, 255, 0.712);
+        margin-bottom: 15px;
+    }
+    button{
+        padding: 10px 18px;
+        font-size: 17px;
+        text-transform: capitalize;
+        background: rgb(15, 179, 70);
+        color: white;
+        transition: all .3s ease-in-out;
+    }
+    button:hover{
+        background: white;
+    }
+}
+
+
+
+
+
+
+
+
+.navbar .container{
+    padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom:1px solid white;
+}
+ .navbar .container .logo{
+    text-transform: uppercase;
+    color: black;
+    font-weight: 700;
+}
+.navbar .container ul{
+    display: flex;
+  }
+  .navbar .container ul li{
+      margin: 0 5px;
+      padding: 5px;
+      a{
+          text-transform: capitalize;
+          color: black;
+          font-family: nunito;
+          transition: all .3s ease-in-out;
+      }
+      a:hover{
+          color: red;
+      }
+  }
+
+  @media(max-width:700px){
+      .showcase .container img{
+          height: 200px;
+      }
+      .showcase .container{
+          flex-direction: column;
+      }
+      .showcase .container .text h1{
+          font-size: 25px;
+          margin-bottom: 15px;
+      }
+  }
