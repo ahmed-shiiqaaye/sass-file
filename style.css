@@ -84,6 +84,137 @@ body {
   font-family: arial;
 }
 
+.sign-in {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(rgba(255, 255, 255, 0.711)));
+  background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.711));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.sign-in form {
+  width: 100%;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.877);
+  padding: 20px;
+}
+
+.sign-in form h3 {
+  text-transform: uppercase;
+  font-size: 30px;
+  font-family: poppins;
+}
+
+.sign-in form div {
+  margin: 20px 0;
+}
+
+.sign-in form div label {
+  text-transform: capitalize;
+  opacity: .7;
+}
+
+.sign-in form div input {
+  margin-top: 5px;
+  padding: 10px;
+  width: 100%;
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.356);
+}
+
+.sign-in form div p {
+  text-align: center;
+}
+
+.sign-in form div p a {
+  color: blue;
+  text-transform: capitalize;
+}
+
+.sign-in form .send {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  display: block;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.sign-in form .send:hover {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.sign-in .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #000;
+  color: white;
+  padding: 7px;
+  cursor: pointer;
+}
+
+.navbar .container ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navbar .container ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .container ul li a i {
+  margin-left: 10px;
+}
+
+.navbar .container ul li ul {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.859);
+  background: brown;
+  position: relative;
+  display: none;
+}
+
+.navbar .container ul li ul::after {
+  position: absolute;
+  content: '';
+  height: 10px;
+  width: 10px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background: brown;
+  left: 10px;
+  top: -3px;
+}
+
 .showcase {
   width: 100%;
   height: 100vh;
@@ -148,10 +279,76 @@ body {
   color: white;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
+  cursor: pointer;
 }
 
 .showcase .container .text button:hover {
   background: white;
+  color: black;
+}
+
+.showcase .container .text .div {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  display: block;
+  width: 200px;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.showcase .container .text .div h3 {
+  font-size: 30px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.count-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 95%;
+  margin-left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.count-container .cards {
+  padding: 20px;
+  border: 1px solid white;
+  color: rgba(52, 23, 23, 0.847);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.count-container .cards:hover {
+  background: rgba(0, 239, 239, 0.1);
+}
+
+.count-container .cards h3 {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.count-container .cards p {
+  margin-top: 10px;
+  font-family: poppins;
+  text-transform: uppercase;
 }
 
 .navbar .container {
@@ -197,18 +394,22 @@ body {
   color: red;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 650px) {
   .showcase .container img {
     height: 200px;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
   }
   .showcase .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    gap: 10px;
   }
   .showcase .container .text h1 {
-    font-size: 25px;
+    font-size: 30px;
     margin-bottom: 15px;
   }
 }
