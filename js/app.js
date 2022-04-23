@@ -19,14 +19,6 @@ for (let i = 0; i < counters.length; i++) {
    
 }
 
-let dropDown = document.querySelector('.drop-down');
-let drop = document.querySelector('.down');
-dropDown.addEventListener('onmouseover',() =>{
-    drop.style.display = 'block'
-})
-dropDown.addEventListener('onmouseout',() =>{
-    drop.style.display = 'none'
-})
 
 let signIn = document.querySelector('.sign-in');
 let signBtns = document.querySelectorAll('.entroll');
